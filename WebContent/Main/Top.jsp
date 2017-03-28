@@ -4,7 +4,6 @@
 <meta http-equiv=content-type content="text/html; charset=euc-kr"> 
 <link rel="stylesheet" type="text/css" href="../css/client.css" />
 	<style>
-	<!--
 	.clsMenuTitle { 
 	         cursor:hand; 
 	}
@@ -27,11 +26,9 @@
 	        FONT-SIZE: 8pt; 
 	        MARGIN-TOP: 1px;}
 	
-	-->
 	</style>
 <!-- -->
         <script>
-       <!--
         var sOpenMenuID = "";
         var iChunk = 0;
         var iChunkStep = 15;
@@ -137,7 +134,6 @@
             eval("parent."+frame1+".location='"+page1+"'");
             eval("parent."+frame2+".location='"+page2+"'");
         }
--->
 </script>
 
 </head>

@@ -1,6 +1,7 @@
 package common;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,7 +10,6 @@ import java.util.Vector;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import javax.sql.DataSource;
 
 import reservation.ReservationBean;
 
@@ -25,11 +25,22 @@ public class CommonAction {
 	}
 	
 	// Connection Pool
-	private Connection getConnection() throws Exception{
-		Context initCtx = new InitialContext();
-		Context envCtx = (Context)initCtx.lookup("java:comp/env");
-		DataSource ds = (DataSource)envCtx.lookup("jdbc/iljunoracle");
-		return ds.getConnection();
+	private static Connection getConnection() throws Exception {
+		Connection connection = null;
+			
+			try {
+				String driver = "oracle.jdbc.driver.OracleDriver";
+		   	 	String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		    	String uid = "testdb";
+		    	String upw = "1234";
+				
+		    	Class.forName(driver);
+				connection = DriverManager.getConnection(url, uid, upw);
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			return connection;
 	}
 	
 	// DB Close
