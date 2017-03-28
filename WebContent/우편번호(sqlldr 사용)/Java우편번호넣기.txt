@@ -1,0 +1,21 @@
+// sqlplus상에서 테이블을 생성한다.
+CREATE TABLE zipcode (
+  ZIPCODE VARCHAR2(7) NOT null,
+  SIDO VARCHAR2(5) NOT null,
+  GUGUN VARCHAR2(15) NOT null,
+  DONG VARCHAR2(25) NOT null,
+  RI VARCHAR2(50) DEFAULT ' ',
+  BUNJI VARCHAR2(50) DEFAULT ' ',
+  SEQ NUMBER(6) primary key);
+==================================================
+
+// 다음 내용을 zipcode.ctl 파일 내용으로 만든다.
+LOAD DATA INFILE 'c:\Java\zipcode.csv' 
+insert INTO TABLE zipcode
+FIELDS TERMINATED BY ',' 
+( ZIPCODE,SIDO,GUGUN,DONG,RI,BUNJI,SEQ )
+==================================================
+
+// 아래 내용을 콘솔창에서 실행한다.
+sqlldr userid=[id]/[pw] control='c:\Java\zipcode.ctl'
+==================================================

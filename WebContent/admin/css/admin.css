@@ -1,0 +1,37 @@
+@CHARSET "EUC-KR";
+
+table {background:black;
+	   border-collapse:collapse;}
+
+th {border:1px; 
+	border-style:solid; 
+	text-align:justify;
+	font-family:HY목각파임B;
+	font-size:20pt;
+	color:blue;
+	background:white;
+	padding:7;
+	}
+td {border:1px;
+	border-style:solid; 
+	text-align:justify;
+	font-family:HY그래픽M;
+	font-size:14pt;
+	background:white;
+	padding:2;
+	}
+
+.tableSubject1 {background:pink; text-align:center;}
+.tableSubject2 {background:linen; color:forestgreen; text-align:center;}
+.tableSubject3 {background:orange; color:white; text-align:center;}
+.center1 {text-align:center;}
+
+a {color:#FF0000; text-decoration:none;}
+a:link {color:red;}
+a:active {color:green;}
+a:hover {color:black;}
+a:ivisited {color:skyblue;}
+
+hr {margin-top:20px;margin-bottom:20px;color:#C4B4E1; height:6px;}
+
+body {cursor: url(http://58.121.75.236:8070/pension/image/gom.ani) !important;}

@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+
+<script language="JavaScript">
+<!--
+var img1 = new Image();
+img1.src = "../project_img/room/bonheur1.JPG" 
+var img2 = new Image();
+img2.src = "../project_img/room/fleur3.JPG"
+var img3 = new Image();
+img3.src = "../project_img/room/lete4.JPG"
+var img4 = new Image();
+img4.src = "../project_img/room/rafure2.JPG" 
+var img5 = new Image();
+img5.src = "../project_img/room/refur9.JPG" 
+var maxLoops = 5;
+var bInterval = 5;
+var count = 2;
+function init() {
+blendObj.filters.blendTrans.apply();
+document.images.blendObj.src = eval("img"+count+".src");
+blendObj.filters.blendTrans.play();
+if (count < maxLoops) {
+count++;
+}
+else {
+count = 1;
+}
+setTimeout("init()", bInterval*500+3000);
+}
+//-->
+</script>
+
+</HEAD>
+<BODY onLoad="init()">
+<center>
+<table bordercolorlight=White bordercolordark=#F9C64B cellspacing=5 border=5>
+<tr><td>
+<img src="../project_img/room/bonheur1.JPG" name="blendObj" border=0 width="350" height="450" style="filter:blendTrans(duration=3)">
+</td></tr>
+</table>
+</center>
+</BODY></HTML>
+				
